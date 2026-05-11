@@ -202,8 +202,7 @@ st.markdown("""
 
 # Fungsi untuk membaca data dari CSV
 def get_data():
-    # Cari file CSV relatif terhadap lokasi file ini
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(base_dir, "dvdrental_data.csv")
     df = pd.read_csv(csv_path)
     df['payment_date'] = pd.to_datetime(df['payment_date'])
